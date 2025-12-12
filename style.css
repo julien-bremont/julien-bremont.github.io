@@ -1,30 +1,46 @@
+/* ---------- Global ---------- */
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
   margin: 0;
   background: #fff;
   color: #222;
 }
 
-.container {
-  display: flex;
-  max-width: 1100px;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- Page layout ---------- */
+
+.page {
+  display: grid;
+  grid-template-columns: 360px 1fr;  /* increase if needed */
+  column-gap: 40px;
+  max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-.sidebar {
-  width: 280px;
-  margin-right: 40px;
+
+.left,
+.right {
+  padding-bottom: 30px;
 }
+
+.right section {
+  margin-bottom: 0px;   /* instead of 30px */
+}
+
+/* ---------- Profile / sidebar ---------- */
 
 .profile-pic {
   width: 100%;
+  max-width: 180px;
   border-radius: 4px;
-}
-
-.sidebar h1 {
-  margin-top: 15px;
-  margin-bottom: 5px;
 }
 
 .subtitle {
@@ -41,9 +57,7 @@ body {
   text-decoration: underline;
 }
 
-.content {
-  flex: 1;
-}
+/* ---------- Sections ---------- */
 
 section {
   margin-bottom: 30px;
@@ -52,12 +66,51 @@ section {
 h2 {
   border-bottom: 1px solid #ddd;
   padding-bottom: 5px;
+  margin-bottom: 10px;   /* THIS is key */
 }
+
+/* ---------- Paper figures (left column) ---------- */
+
+.paper-figure {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.paper-figure img {
+  width: 100%;        /* ← fill the column */
+  height: auto;
+  max-width: none;   /* ← CRUCIAL: removes hidden caps */
+margin: 0;
+  padding: 0;
+
+}
+
+.paper-figure figcaption {
+  font-size: 0.8em;
+  line-height: 1.25;
+  margin-top: 4px;
+  color: #555;
+}
+
+/* ---------- Paper text (right column) ---------- */
+
+.paper-text p {
+  margin-top: 0;
+}
+
+/* ---------- Standalone figures (if any) ---------- */
 
 .figure {
+  width: 400px;
   max-width: 100%;
-  width: 500px;          /* adjust to taste */
-  display: block;
-  margin: 20px auto;     /* centers it */
+  margin: 20px auto;
 }
 
+/* ---------- Responsive ---------- */
+
+@media (max-width: 800px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+}

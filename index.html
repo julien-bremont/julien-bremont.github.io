@@ -3,112 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <title>Julien Brémont</title>
+
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="container">
+<div class="page">
 
-  <!-- LEFT COLUMN -->
-  <aside class="sidebar">
-    <img src="photo.jpg" alt="Julien Brémont" class="profile-pic">
+  <!-- ROW 1 : PROFILE / INTRO -->
+  <div class="left profile">
+    <img src="images/id.jpg" alt="Julien Brémont" class="profile-pic">
     <h1>Julien Brémont</h1>
-    <p class="subtitle">Postdoctoral Researcher, Collège de France</p>
+    <p class="subtitle">Postdoctoral Researcher<br>Collège de France</p>
 
     <p>
-      📧 julien.bremont@college-de-france.fr<br>
+      📧 <a href="mailto:julien.bremont@college-de-france.fr">Contact Me</a><br>
       🌍 Paris, France
     </p>
 
     <p class="links">
-      <a href="https://scholar.google.com/citations?user=PmW41yQAAAAJ&hl=fr" target="_blank" rel="noopener">Google Scholar</a><br>
-      <a href="CVfr.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+      <a href="https://scholar.google.com/citations?user=PmW41yQAAAAJ&hl=fr" target="_blank">Google Scholar</a><br>
+      <a href="CVen.pdf" target="_blank">CV (EN)</a><br>
+      <a href="CVfr.pdf" target="_blank">CV (FR)</a>
     </p>
-  </aside>
+  </div>
 
-  <!-- RIGHT COLUMN -->
-  <main class="content">
+  <div class="right intro">
     <section>
       <h2>About Me</h2>
       <p>
-        I am a theoretical physicist specializing in statistical physics. I did my undergraduate studies at École polytechnique (X2018) and ENS Paris (ICFP, Theoretical Physics). <br />
-        I then completed my PhD at Sorbonne Université under the supervision of Raphaël Voituriez and Olivier Bénichou. <br /> 
-        I am currently a postdoctoral researcher at Collège de France, working with Jean-François Joanny on problems related to active matter and out-of-equilibrium physics.
-        </p>
-    </section>
-    <section>
+        I am a theoretical physicist specializing in statistical physics. I completed my undergraduate
+        studies at École polytechnique (X2018) and at ENS Paris (ICFP, theoretical physics).<br>
+        I earned my PhD from Sorbonne Université under the supervision of Raphaël Voituriez and Olivier
+        Bénichou; <a href="https://arxiv.org/abs/2507.19937" target="_blank">here is my PhD manuscript</a>.<br>
+        I am currently a postdoctoral researcher at Collège de France, working with Jean-François Joanny on active matter and out-of-equilibrium physics.
+      </p>
+
       <h2>Research Interests</h2>
       <p>
-        My research focuses on the quantitative characterization of space exploration by random walks, with particular emphasis on the interplay between the geometry of the explored territory and the intrinsic memory, or non-Markovian behavior, of the walker. This question lies at the heart of a wide range of phenomena, from how ants explore space by following pheromone trails, to how cells migrate while actively remodeling their extracellular matrix, and how long-term memory effects may lead to the collapse of a financial index after a prolonged rise.
-        </p>
-       </section>
-    <section>
+        My research focuses on the quantitative characterization of space exploration by random walks, a question that lies at the heart of a wide range of phenomena. These include how ants explore their environment by following pheromone trails, how cells migrate while actively remodeling their extracellular matrix, and how long-term memory effects can trigger the collapse of a financial index after a prolonged rise. <br> I investigate this classic and central problem from a new perspective, with particular emphasis on the interplay between the geometry of the explored territory and the intrinsic memory of the walker’s past trajectory, the defining feature of non-Markovian walkers. Such behavior makes exploration properties particularly challenging to analyze; yet it is ubiquitous across science, appearing in contexts as diverse as physics, biology, and finance. As the late N. G. van Kampen famously remarked, non-Markovian dynamics are the rule rather than the exception in Nature.
+      </p>
+
       <h2>Publications</h2>
+    </section>
+  </div>
 
-  <ul>
+  <!-- PAPER 1 -->
+  <div class="left paper-figure">
+    <img src="images/illustpin (1).png" alt="Flip illustration"><br>
+    <img src="images/dessin-percolation.png" alt="Flip illustration" style="width:250px">
+  </div>
 
-    <li>
-      <strong>Flips Reveal the Universal Impact of Memory on Random Explorations</strong><br>
-      <em>Julien Brémont</em>, L. Régnier, A. Barbier-Chebbah, O. Bénichou, R. Voituriez<br>
-      <em>Nature Communications</em> (2025)<br>
-      <p>
-        <img src="images/illustpin (1).png" class="figure">
-        This article addresses a central limitation in the study of non-Markovian dynamics: in most real systems, the microscopic origin of memory is unknown or too complex to model, making it difficult to infer a reliable description of exploration dynamics. To overcome this difficulty, one must identify unifying principles governing how diverse random walks explore space, enabling model-free predictions. We introduce the <em>flip</em>, a purely geometric observable that quantifies the propensity of a process to reverse its direction of exploration—schematically, a forager turning back to exploit previously visited regions. We show that the flip probability follows a striking universal scaling law, decaying with the inverse of the size of the visited territory, largely independent of the underlying dynamics. This framework applies across a wide class of models and is validated on both biological trajectories and financial time series, providing a robust, model-free tool to quantify exploration in systems with memory.
-      </p>
-    </li>
+  <div class="right paper-text">
+    <strong>Flips Reveal the Universal Impact of Memory on Random Explorations</strong><br>
+    J. B., L. Régnier, A. Barbier-Chebbah, O. Bénichou, R. Voituriez<br>
+    <em>Nature Communications</em> (2025)
+    <p>
+      This article addresses a central limitation in the study of non-Markovian dynamics: in most real systems, the microscopic origin of memory is unknown or too complex to model, making it difficult to infer a reliable description of exploration dynamics. To overcome this difficulty, one must identify unifying principles governing how diverse random walks explore space, enabling model-free predictions. We introduce the <em>flip</em>, a purely geometric observable that quantifies the propensity of a process to reverse its direction of exploration—schematically, a forager turning back to exploit previously visited regions. We show that the flip probability follows a striking universal scaling law, decaying with the inverse of the size of the visited territory, largely independent of the underlying dynamics. This framework applies across a wide class of models and is validated on both biological trajectories and financial time series, providing a robust, model-free tool to quantify exploration in systems with memory.
+    </p>
+  </div>
 
-    <li>
-      <strong>Beyond Poisson: First-Passage Asymptotics of Renewal Shot Noise</strong><br>
-      <em>Julien Brémont</em><br>
-      <em>arXiv:2510.21670</em> (2025)<br>
-      <img src="images/illust-neuron-2.png" class="figure">
-      <p>
-        This paper derives the first universal asymptotic expression for first-passage times of
-        renewal shot-noise processes with non-Poisson statistics. It reveals how memory encoded in
-        inter-arrival times modifies the classical Arrhenius law, with direct implications for
-        neuronal firing, gene expression, and other excitation–relaxation systems exhibiting
-        non-Markovian dynamics.
-      </p>
-    </li>
+  <!-- PAPER 2 -->
+  <div class="left paper-figure">
+    <figure>
+      <img src="images/illust-neuron-2.png" alt="Neuron model">
+      <figcaption>
+        The <span style="color:blue;">potential <em>U</em></span> of neuron <em>A</em> crosses
+        the <span style="color:red;">firing threshold</span> at time
+        <span style="color:green;"><em>T</em></span>.
+      </figcaption>
+    </figure>
+  </div>
 
-    <li>
-      <strong>Persistence Exponents of Self-Interacting Random Walks</strong><br>
-      <em>Julien Brémont</em>, L. Régnier, R. Voituriez, O. Bénichou<br>
-      <em>Physical Review Letters</em> <strong>134</strong>, 197103 (2025)<br>
-      <img src="images/illust-sirw.png" class="figure">
-      <p>
-        Persistence exponents quantify the long-time probability that a random walker avoids a given region of space, a central observable for characterizing exploration processes. Self-interacting random walks provide a minimal and physically motivated class of non-Markovian models in which the walker continuously modifies, and responds to, its own past trajectory, a mechanism relevant to systems ranging from animal foraging to migrating cells and non-reversible MCMC algorithms. In this work, we obtain the first exact determination of persistence exponents for one-dimensional self-interacting random walks. By exploiting their hidden algebraic structure, rooted in Tóth’s Ray–Knight theorems, we provide quantitative tools to detect and characterize self-interaction–induced memory effects from experimental trajectories.
-      </p>
-    </li>
+  <div class="right paper-text">
+    <strong>Beyond Poisson: First-Passage Asymptotics of Renewal Shot Noise</strong><br>
+    J. B.<br>
+    arXiv:2510.21670 (2025)
+    <p>
+      This paper derives the first general asymptotic expression for first-passage times of renewal shot-noise processes with non-Poisson statistics and impulsions of exponential amplitudes. It reveals how memory encoded in inter-arrival times modifies the classical Arrhenius law, with direct implications for neuronal firing, gene expression, and other excitation–relaxation systems exhibiting non-Markovian dynamics.
+    </p>
+  </div>
 
-    
+  <!-- PAPER 3 -->
+  <div class="left paper-figure">
+    <img src="images/illust-sirw.png" alt="Self-interacting random walk">
+  </div>
 
-    <li>
-      <strong>Exact Propagators of One-Dimensional Self-Interacting Random Walks</strong><br>
-      <em>Julien Brémont</em>, O. Bénichou, R. Voituriez<br>
-      <em>Physical Review Letters</em> <strong>133</strong>, 157101 (2024)<br>
-      <p>
-        This work provides exact expressions for the propagator of key universality classes of
-        one-dimensional self-interacting random walks. It grants access to fundamental observables previously thought
-        intractable and uncovers intrinsically non-Markovian mechanisms shaping spatial exploration, such as non-monotonous propagators.
-      </p>
-    </li>
+  <div class="right paper-text">
+    <strong>Persistence Exponents of Self-Interacting Random Walks</strong><br>
+    J. B., L. Régnier, O. Bénichou, R. Voituriez<br>
+    <em>Physical Review Letters</em> <strong>134</strong>, 197103 (2025)
+    <p>
+      Persistence exponents quantify the long-time probability that a random walker avoids a given region of space, a central observable for characterizing exploration processes. Self-interacting random walks provide a minimal and physically motivated class of non-Markovian models in which the walker continuously modifies, and responds to, its own past trajectory, a mechanism relevant to systems ranging from animal foraging to migrating cells and non-reversible MCMC algorithms. In this work, we obtain the first exact determination of persistence exponents for one-dimensional self-interacting random walks. By exploiting their hidden algebraic structure, rooted in Tóth’s Ray–Knight theorems, we provide quantitative tools to detect and characterize self-interaction–induced memory effects from experimental trajectories.
+    </p>
+  </div>
 
-    <li>
-      <strong>Aging Dynamics of d-Dimensional Locally Activated Random Walks</strong><br>
-      <em>Julien Brémont</em>, T. Jakuszeit, R. Voituriez, O. Bénichou<br>
-      <em>Physical Review E</em> <strong>110</strong>, 014604 (2024)<br>
-      <img src="images/dendritic.png" class="figure">
-      <p>
-        This article introduces a general analytical framework for locally activated random walks, motivated by biological systems in which cells adapt their motility after traversing specific regions of their environment. In particular, it models situations where cells such as dendritic cells modify their speed or persistence after passing through confined or chemically rich zones. The theory shows how such local activation mechanisms generate strong memory effects, including aging, dynamical trapping, and non-Gaussian exploration in arbitrary dimensions, and identifies robust signatures that can be directly tested in cell migration experiments.
-      </p>
-    </li>
+  <!-- PAPER 4 -->
+  <div class="left paper-figure">
+    <figure style="margin:0">
+      <img src="images/satw-dessin.png" alt="Non-monotonic propagator" style="width:375px">
+      <figcaption>
+        Exact propagators illustrating non-monotonic profiles induced by self-repulsion.
+      </figcaption>
+    </figure>
+  </div>
 
-  </ul>
-</section>
+  <div class="right paper-text">
+    <strong>Exact Propagators of One-Dimensional Self-Interacting Random Walks</strong><br>
+    J. B., O. Bénichou, R. Voituriez<br>
+    <em>Physical Review Letters</em> <strong>133</strong>, 157101 (2024)
+    <p>
+      This work derives exact expressions for the propagator of two central universality classes of one-dimensional self-interacting random walks: the polynomially self-repelling walk and the saturating self-interacting walk. These results provide access to fundamental observables that had remained analytically out of reach and reveal intrinsically non-Markovian mechanisms governing spatial exploration, including non-monotonic propagators induced by self-repulsion. <br>
+      <a href="https://community.wolfram.com/groups/-/m/t/3172230" target="_blank">This paper has been put forward by Wolfram Research.</a>
+    </p>
+  </div>
 
+  <!-- PAPER 5 -->
+  <div class="left paper-figure">
+    <img src="images/dendritic.png" alt="Dendritic cells">
+  </div>
 
-  </main>
+  <div class="right paper-text">
+    <strong>Aging Dynamics of d-Dimensional Locally Activated Random Walks</strong><br>
+    J. B., T. Jakuszeit, O. Bénichou, R. Voituriez<br>
+    <em>Physical Review E</em> <strong>110</strong>, 014604 (2024)
+    <p>
+      This article introduces a general analytical framework for locally activated random walks, motivated by biological systems in which cells adapt their motility after traversing specific regions of their environment. In particular, it models situations where cells such as dendritic cells modify their speed or persistence after passing through confined or chemically rich zones. The theory shows how such local activation mechanisms generate strong memory effects, including aging, dynamical trapping, and non-Gaussian exploration in arbitrary dimensions, and identifies robust signatures that can be directly tested in cell migration experiments.
+    </p>
+  </div>
 
 </div>
 
