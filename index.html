@@ -31,6 +31,7 @@
   ]
 }
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
 
 
 </head>
@@ -80,15 +81,21 @@
   <!-- PAPER 1 -->
   <div class="left paper-figure">
     <img src="images/illustpin (1).png" alt="Flip illustration"><br>
-    <img src="images/dessin-percolation.png" alt="Flip illustration" style="width:250px">
+    <figcaption>
+        Flips in spatial exploration, corresponding to transitions from one extremity (red) of the visited domain (gray) to the opposite one (blue).
+      </figcaption>
+    <img src="images/temporal-series-univaging-curve-right-greyed-thickened.png" alt="Flip illustration" style="width:300px; margin-left:15px"><br>
+    <figcaption>
+      Flips in a time series, corresponding to transitions from a local maximum (red) to a local minimum (blue).
+      </figcaption>
   </div>
 
   <div class="right paper-text">
     <strong>Flips Reveal the Universal Impact of Memory on Random Explorations</strong><br>
     J. B., L. Régnier, A. Barbier-Chebbah, O. Bénichou, R. Voituriez<br>
-    <em>Nature Communications</em> (2025)
+    <em>Nature Communications</em> (2025)<br><br>
     <p>
-      This article addresses a central limitation in the study of non-Markovian dynamics: in most real systems, the microscopic origin of memory is unknown or too complex to model, making it difficult to infer a reliable description of exploration dynamics. To overcome this difficulty, one must identify unifying principles governing how diverse random walks explore space, enabling model-free predictions. We introduce the <em>flip</em>, a purely geometric observable that quantifies the propensity of a process to reverse its direction of exploration—schematically, a forager turning back to exploit previously visited regions. We show that the flip probability follows a striking universal scaling law, decaying with the inverse of the size of the visited territory, largely independent of the underlying dynamics. This framework applies across a wide class of models and is validated on both biological trajectories and financial time series, providing a robust, model-free tool to quantify exploration in systems with memory.
+      This article addresses a central limitation in the study of random explorations: in most real systems, the microscopic origin of memory is unknown or too complex to model, making it difficult to infer a reliable description of exploration dynamics. To overcome this difficulty, one must identify unifying principles governing how diverse random walks explore space, enabling model-free predictions. We introduce the <em>flip</em>, a purely geometric observable that quantifies the propensity of a process to reverse its direction of exploration—schematically, a forager turning back to exploit previously visited regions. We show that the flip probability follows a striking universal scaling law, decaying as \( A/n\), where \( n \) is the size of the visited territory, and \(A \) is a process-dependent constant, acting as a fingerprint of the type of memory. This framework applies across a wide class of models and is validated on both biological trajectories and financial time series, providing a robust, model-free tool to quantify exploration in systems with memory.
     </p>
   </div>
 
@@ -107,7 +114,7 @@
   <div class="right paper-text">
     <strong>Beyond Poisson: First-Passage Asymptotics of Renewal Shot Noise</strong><br>
     J. B.<br>
-    arXiv:2510.21670 (2025)
+    <a href="https://arxiv.org/abs/2510.21670" target="_blank">arXiv:2510.21670 (2025)</a><br><br>
     <p>
       This paper derives the first general asymptotic expression for first-passage times of renewal shot-noise processes with non-Poisson statistics and impulsions of exponential amplitudes. It reveals how memory encoded in inter-arrival times modifies the classical Arrhenius law, with direct implications for neuronal firing, gene expression, and other excitation–relaxation systems exhibiting non-Markovian dynamics.
     </p>
@@ -115,15 +122,21 @@
 
   <!-- PAPER 3 -->
   <div class="left paper-figure">
-    <img src="images/illust-sirw.png" alt="Self-interacting random walk">
+    <figure style="margin:0">
+      <img src="images/illust-sirw.png" alt="Self-interacting random walk">
+      <figcaption>
+        Two types of self-interacting random walks: self-repelling (red) and self-attracting (green).
+      </figcaption>
+    </figure>
+    
   </div>
 
   <div class="right paper-text">
     <strong>Persistence Exponents of Self-Interacting Random Walks</strong><br>
     J. B., L. Régnier, O. Bénichou, R. Voituriez<br>
-    <em>Physical Review Letters</em> <strong>134</strong>, 197103 (2025)
+    <em><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.197103" target="_blank">Physical Review Letters</em> <strong>134</strong>, 197103 (2025)</a><br><br>
     <p>
-      Persistence exponents quantify the long-time probability that a random walker avoids a given region of space, a central observable for characterizing exploration processes. Self-interacting random walks provide a minimal and physically motivated class of non-Markovian models in which the walker continuously modifies, and responds to, its own past trajectory, a mechanism relevant to systems ranging from animal foraging to migrating cells and non-reversible MCMC algorithms. In this work, we obtain the first exact determination of persistence exponents for one-dimensional self-interacting random walks. By exploiting their hidden algebraic structure, rooted in Tóth’s Ray–Knight theorems, we provide quantitative tools to detect and characterize self-interaction–induced memory effects from experimental trajectories.
+      The persistence exponent \( \theta \) quantifies the long-time probability \( S(x,t) \propto t^{-1-\theta}\) that a random walker has never visited site \( x\). This is a central observable for characterizing exploration processes, with a long history in statistical physics. Self-interacting random walks provide a minimal and physically motivated class of non-Markovian models in which the walker continuously modifies, and responds to, its own past trajectory, a mechanism relevant to systems ranging from animal foraging to migrating cells and non-reversible MCMC algorithms. In this work, we obtain the first exact determination of persistence exponents for one-dimensional self-interacting random walks. By exploiting their hidden algebraic structure, rooted in Tóth’s Ray–Knight theorems, we provide quantitative tools to detect and characterize self-interaction–induced memory effects from experimental trajectories.
     </p>
   </div>
 
@@ -132,7 +145,7 @@
     <figure style="margin:0">
       <img src="images/satw-dessin.png" alt="Non-monotonic propagator" style="width:375px">
       <figcaption>
-        Exact propagators illustrating non-monotonic profiles induced by self-repulsion.
+        Example of a saturating self-interacting walk: jump probabilities are modified only at the edge (white sites) of the visited domain (black sites).
       </figcaption>
     </figure>
   </div>
@@ -140,28 +153,43 @@
   <div class="right paper-text">
     <strong>Exact Propagators of One-Dimensional Self-Interacting Random Walks</strong><br>
     J. B., O. Bénichou, R. Voituriez<br>
-    <em>Physical Review Letters</em> <strong>133</strong>, 157101 (2024)
+    <em><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.133.157101" target="_blank">Physical Review Letters</em> <strong>133</strong>, 157101 (2024)</a><br><br>
     <p>
-      This work derives exact expressions for the propagator of two central universality classes of one-dimensional self-interacting random walks: the polynomially self-repelling walk and the saturating self-interacting walk. These results provide access to fundamental observables that had remained analytically out of reach and reveal intrinsically non-Markovian mechanisms governing spatial exploration, including non-monotonic propagators induced by self-repulsion. <br>
+      This work derives exact expressions for the propagator \(P(x,t)\), that is, the probability that the walker is on site \( x \) at time \(t \), for two central universality classes of one-dimensional self-interacting random walks: the polynomially self-repelling walk and the saturating self-interacting walk. These results provide access to fundamental observables that had remained analytically out of reach and reveal intrinsically non-Markovian mechanisms governing spatial exploration, including non-monotonic propagators induced by self-repulsion. <br>
       <a href="https://community.wolfram.com/groups/-/m/t/3172230" target="_blank">This paper has been put forward by Wolfram Research.</a>
     </p>
   </div>
 
   <!-- PAPER 5 -->
   <div class="left paper-figure">
-    <img src="images/dendritic.png" alt="Dendritic cells">
+    <figure style="margin:0">
+    <img src="images/dendritic.png" alt="Dendritic cells" style="width:300px; margin-left:30px">
+    <figcaption>
+        The dynamics depend on \( a \), the time spent in the blue region. Here, the (dendritic) cell accelerates with increasing \( a\).
+      </figcaption>
+    </figure>
+
   </div>
 
   <div class="right paper-text">
     <strong>Aging Dynamics of d-Dimensional Locally Activated Random Walks</strong><br>
     J. B., T. Jakuszeit, O. Bénichou, R. Voituriez<br>
-    <em>Physical Review E</em> <strong>110</strong>, 014604 (2024)
+    <em><a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.110.014604" target="_blank">Physical Review E</em> <strong>110</strong>, 014604 (2024)</a><br><br>
     <p>
       This article introduces a general analytical framework for locally activated random walks, motivated by biological systems in which cells adapt their motility after traversing specific regions of their environment. In particular, it models situations where cells such as dendritic cells modify their speed or persistence after passing through confined or chemically rich zones. The theory shows how such local activation mechanisms generate strong memory effects, including aging, dynamical trapping, and non-Gaussian exploration in arbitrary dimensions, and identifies robust signatures that can be directly tested in cell migration experiments.
     </p>
+
+    <br><br><br>
+    <p class="keywords">
+Keywords: non-Markovian processes, random walks, active matter, statistical physics.
+</p>
   </div>
 
+
 </div>
+
+
+
 
 </body>
 </html>
